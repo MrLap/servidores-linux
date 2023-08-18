@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>install lamp</title>
+</head>
+<body>
+    Como instalar o LAMP no Linux Ubuntu, Debian e derivados
+Para instalar o LAMP no Linux Ubuntu e derivados, faça o seguinte:
+
+<p>Passo 1. Abra um terminal ctrl+alt+t;</p>
+<p>Passo 2. Dentro do terminal do Ubuntu, digite o comando abaixo (Observe que o símbolo ^ não é um erro, o comando é assim mesmo). Depois de digitar o comando, pressione a tecla “enter”, e quando for solicitado, digite a senha e a tecla “enter” novamente. Após a listagem dos pacotes necessários, será perguntado se deseja realmente continuar a instalação. Para confirmar, digite “S” e tecle “enter”;
+ <span>sudo apt-get install lamp-server^</span>  
+   
+    <p>
+        Passo 3. Se você estiver usando Debian, use o comando abaixo (adapte o comando às versões atuais dos pacotes);
+</p>
+
+<span>sudo apt-get install apache2 mysql-server php php-mysql libapache2-mod-php</span>
+
+<p>Passo 4. Se quiser instalar uma ótima ferramenta de administração para o MySQL, use o comando abaixo;</p>
+
+<span>sudo apt-get install phpmyadmin</span>
+
+<p>Passo 5. Se quiser instalar o WordPress, use o comando abaixo para adicionar os recursos que ele precisa;</p>
+
+<span>sudo apt-get install php-curl php-gd php-mbstring php-mcrypt php-xml php-xmlrpc</span>
+
+<p>Passo 6. Para saber como ficou a instalação é preciso criar uma página em PHP, para isso, no terminal digite o comando abaixo e e em seguida, tecle “enter”;</p>
+
+<span>echo "< ?php phpinfo(); ? >" | sudo tee /var/www/html/test.php</span>
+
+<p>
+Passo 7. Reinicie o servidor apache digitando o comando abaixo e depois tecle “enter”;
+</p>
+<span>
+sudo /etc/init.d/apache2 restart
+</span>
+<p>
+Passo 8. Abra seu navegador favorito e na barra de endereço dele digite “http://localhost/test.php” (sem as aspas) e depois tecle “enter”. Serão mostradas todas as informações sobre a versão do PHP, MySQL e Apache que foram instalados.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comandos linux</title>
+</head>
+<body>
+    <h1>comandos linux</h1>
+    <ul>
+        <li>Ajuda</li>
+        <li>Manipulação de arquivos e diretorios</li>
+        <li>Comandos de filtragem</li>
+        <li>Comandos de backup</li>
+    </ul>
+
+    <h1>Comandos de Ajuda do Terminal</h1>
+    <ul>
+        <li><code>help</code> - Exibe informações de ajuda geral.</li>
+        <li><code>man comando</code> - Exibe o manual do usuário para um comando específico.</li>
+        <li><code>--help</code> ou <code>-h</code> - Muitos comandos possuem opções de ajuda curtas.</li>
+        <li><code>info comando</code> - Exibe informações detalhadas sobre um comando.</li>
+        <li><code>whatis comando</code> - Exibe uma breve descrição de um comando.</li>
+   
+    </ul>
+
+    <h1>Comandos de Manipulação de Arquivos e Diretórios</h1>
+    <p>Aqui estão alguns comandos úteis para manipular arquivos e diretórios no terminal:</p>
+    <ul>
+        <li><code>ls</code> - Lista os arquivos e diretórios no diretório atual.</li>
+        <h1>Variações do Comando <code>ls</code></h1>
+    <p>O comando <code>ls</code> é usado para listar arquivos e diretórios. Aqui estão algumas variações:</p>
+    <ul>
+        <li><code>ls -l</code> - Lista os arquivos com detalhes, incluindo permissões, proprietário e tamanho.</li>
+        <li><code>ls -a</code> - Lista todos os arquivos, incluindo os ocultos que começam com ".".</li>
+        <li><code>ls -h</code> - Lista arquivos com tamanhos humanamente legíveis (KB, MB, GB).</li>
+        <li><code>ls -t</code> - Lista arquivos por data e hora de modificação, do mais recente ao mais antigo.</li>
+        <li><code>ls -R</code> - Lista arquivos recursivamente, mostrando também os diretórios internos.</li>
+        <li><code>ls -lhS</code> - Combina várias opções. Lista com detalhes, tamanhos legíveis e ordena por tamanho.</li>
+        <li><code>ls diretório</code> - Lista os arquivos e diretórios no diretório especificado.</li>
+    </ul> <br>
+
+        <li><code>pwd</code> - Exibe o caminho do diretório atual.</li>
+        <h1>Variações do Comando <code>pwd</code></h1>
+    <p>O comando <code>pwd</code> é usado para mostrar o diretório atual. Aqui estão algumas variações:</p>
+    <ul>
+        <li><code>pwd</code> - Mostra o caminho absoluto do diretório atual.</li>
+        <li><code>pwd -P</code> - Mostra o caminho físico real (resolve links simbólicos).</li>
+        <li><code>pwd -L</code> - Mostra o caminho lógico (não resolve links simbólicos).</li>
+    </ul><br>
+        <li><code>cd diretório</code> - Navega para o diretório especificado.</li>
+        <h1>Variações do Comando <code>cd</code></h1>
+    <p>O comando <code>cd</code> é usado para mudar de diretório. Aqui estão algumas variações:</p>
+    <ul>
+        <li><code>cd diretório</code> - Navega para o diretório especificado.</li>
+        <li><code>cd ..</code> - Navega para o diretório pai (um nível acima).</li>
+        <li><code>cd ~</code> - Navega para o diretório do usuário (home).</li>
+        <li><code>cd -</code> - Retorna para o diretório anterior.</li>
+        <li><code>cd /</code> - Navega para o diretório raiz.</li>
+    </ul><br>
+        <li><code>mkdir nome</code> - Cria um novo diretório com o nome especificado.</li>
+        <h1>Variações do Comando <code>mkdir</code></h1>
+    <p>O comando <code>mkdir</code> é usado para criar diretórios. Aqui estão mais algumas variações:</p>
+    <ul>
+        <li><code>mkdir dir1 dir2</code> - Cria múltiplos diretórios de uma vez.</li>
+        <li><code>mkdir -m modo dir</code> - Define permissões específicas para o diretório criado.</li>
+        <li><code>mkdir --help</code> - Exibe informações de ajuda sobre o comando.</li>
+        <li><code>mkdir -v dir</code> - Mostra uma mensagem detalhada para cada diretório criado.</li>
+    </ul><br>
+        <li><code>touch arquivo</code> - Cria um novo arquivo vazio com o nome especificado.</li>
+        <h1>Variações do Comando <code>touch</code></h1>
+        <p>O comando <code>touch</code> é usado para criar e modificar a data de acesso e modificação de arquivos. Aqui estão algumas variações:</p>
+        <ul>
+            <li><code>touch arquivo</code> - Cria um novo arquivo vazio com o nome especificado.</li>
+            <li><code>touch -c arquivo</code> - Não cria um arquivo se ele não existir.</li>
+            <li><code>touch -t YYYYMMDDHHMM arquivo</code> - Define a data e hora do arquivo no formato específico.</li>
+            <li><code>touch -d "data" arquivo</code> - Define a data e hora de modificação do arquivo.</li>
+            <li><code>touch -r arquivo_referência arquivo</code> - Define a data e hora do arquivo baseado em outro arquivo.</li>
+            <li><code>touch -a arquivo</code> - Atualiza somente a data de acesso do arquivo.</li>
+        </ul><br>
+
+        <li><code>cp origem destino</code> - Copia um arquivo ou diretório da origem para o destino.</li>
+        <h1>Variações do Comando <code>cp</code></h1>
+        <p>O comando <code>cp</code> é usado para copiar arquivos e diretórios. Aqui estão algumas variações:</p>
+        <ul>
+            <li><code>cp origem destino</code> - Copia um arquivo ou diretório da origem para o destino.</li>
+            <li><code>cp -r diretório destino</code> - Copia um diretório e seu conteúdo para o destino.</li>
+            <li><code>cp -i arquivo destino</code> - Pergunta antes de substituir um arquivo existente.</li>
+            <li><code>cp -u arquivo destino</code> - Copia apenas se o arquivo de origem for mais novo do que o destino.</li>
+            <li><code>cp -v arquivo destino</code> - Exibe informações detalhadas durante a cópia.</li>
+            <li><code>cp -p arquivo destino</code> - Preserva as permissões e datas originais do arquivo.</li>
+        </ul><br>
+
+        <li><code>mv origem destino</code> - Move (ou renomeia) um arquivo ou diretório da origem para o destino.</li>
+        <h1>Variações do Comando <code>mv</code></h1>
+    <p>O comando <code>mv</code> é usado para mover arquivos e diretórios. Aqui estão algumas variações:</p>
+    <ul>
+        <li><code>mv origem destino</code> - Move (ou renomeia) um arquivo ou diretório da origem para o destino.</li>
+        <li><code>mv -i origem destino</code> - Pergunta antes de substituir um arquivo existente.</li>
+        <li><code>mv -u arquivo destino</code> - Move apenas se o arquivo de origem for mais novo do que o destino.</li>
+        <li><code>mv -v arquivo destino</code> - Exibe informações detalhadas durante o movimento.</li>
+        <li><code>mv -f origem destino</code> - Força a substituição do destino, sem perguntar.</li>
+        <li><code>mv -u * destino</code> - Move todos os arquivos, mas somente se o destino não existir.</li>
+    </ul><br>
+
+        <li><code>rm arquivo</code> - Remove um arquivo. Use <code>-r</code> para remover um diretório.</li>
+    </ul>
+    <p>Lembre-se de que muitos comandos possuem opções adicionais. Você pode usar <code>--help</code> ou <code>-h</code> após um comando para ver mais informações sobre suas opções.</p>
+
+
+</html>

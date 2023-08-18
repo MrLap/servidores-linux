@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Linux</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            background-color: #df5959;
+            padding: 10px;
+            border-radius: 5px;
+        
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            
+        }
+        code {
+            background-color: #f2f2f2;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comandos Linux</h1>
+    <ul>
+        <li>Ajuda</li>
+        <li>Manipulação de arquivos e diretórios</li>
+      <!--  <li>Comandos de filtragem</li>
+        <li>Comandos de backup</li>-->
+    </ul>
+
+    <h1>Comandos de Ajuda do Terminal</h1>
+    <ul>
+        <li><code>help</code> - Exibe informações de ajuda geral.</li>
+        <li><code>man comando</code> - Exibe o manual do usuário para um comando específico.</li>
+        <li><code>--help</code> ou <code>-h</code> - Muitos comandos possuem opções de ajuda curtas.</li>
+        <li><code>whatis comando</code> - Exibe uma breve descrição de um comando.</li>
+        <li>
+            <h1>Exemplo de Uso do Comando <code>help | grep</code></h1>
+            <p>O comando <code>help</code> é usado para obter informações sobre comandos internos do shell bash. Para procurar informações específicas, você pode combinar o <code>help</code> com o <code>grep</code> da seguinte maneira:</p>
+            <pre><code>help | grep comando</code></pre>
+            <p>Neste exemplo, substitua "comando" pelo comando que você deseja encontrar informações. O <code>grep</code> irá filtrar as linhas que contenham a palavra "comando" no output do <code>help</code>.</p>
+            <p>Isso é útil para encontrar informações rápidas sobre comandos internos do shell.</p>
+        
+        </li>
+
+    
+    </ul>
+
+    <h1>Comandos de Manipulação de Arquivos e Diretórios</h1>
+    <ul>
+        <li><code>ls</code> - Lista os arquivos e diretórios no diretório atual.</li>
+        <ul>
+            <li><code>ls -l</code> - Lista os arquivos com detalhes, incluindo permissões, proprietário e tamanho.</li>
+            <li><code>ls -a</code> - Lista todos os arquivos, incluindo os ocultos que começam com ".".</li>
+            <li><code>ls -h</code> - Lista arquivos com tamanhos humanamente legíveis (KB, MB, GB).</li>
+            <li><code>ls -t</code> - Lista arquivos por data e hora de modificação, do mais recente ao mais antigo.</li>
+            <li><code>ls -R</code> - Lista arquivos recursivamente, mostrando também os diretórios internos.</li>
+            <li><code>ls -lhS</code> - Combina várias opções. Lista com detalhes, tamanhos legíveis e ordena por tamanho.</li>
+            <li><code>ls diretório</code> - Lista os arquivos e diretórios no diretório especificado.</li>
+            <li><code>ls -lah</code> - Lista os arquivos com detalhes, incluindo permissões, proprietário e tamanho (incluindo arquivos ocultos).</li>
+            <li><code>ls -R</code> - Lista arquivos recursivamente, mostrando também os diretórios internos.</li>
+            <li><code>ls -lar</code> - Lista todos os arquivos, incluindo os ocultos, com detalhes reversamente ordenados.</li>
+            <li><code>ls -la *.txt</code> - Lista arquivos com extensão ".txt" no diretório atual, incluindo ocultos.</li>
+            <li><code>ls /</code> - Lista o conteúdo do diretório raiz.</li>
+            <li><code>ls -la /var/</code> - Lista todos os arquivos no diretório "/var/" com detalhes, incluindo os ocultos.</li>
+     
+        </ul>
+        <li><code>pwd</code> - Exibe o caminho do diretório atual.</li>
+        <ul>
+            <li><code>pwd</code> - Mostra o caminho absoluto do diretório atual.</li>
+            <li><code>pwd -P</code> - Mostra o caminho físico real (resolve links simbólicos).</li>
+            <li><code>pwd -L</code> - Mostra o caminho lógico (não resolve links simbólicos).</li>
+        </ul>
+        <li><code>cd diretório</code> - Navega para o diretório especificado.</li>
+        <ul>
+            <li><code>cd diretório</code> - Navega para o diretório especificado.</li>
+            <li><code>cd ..</code> - Navega para o diretório pai (um nível acima).</li>
+            <li><code>cd ~</code> - Navega para o diretório do usuário (home).</li>
+            <li><code>cd -</code> - Retorna para o diretório anterior.</li>
+            <li><code>cd /</code> - Navega para o diretório raiz.</li>
+        </ul>
+        <li><code>mkdir nome</code> - Cria um novo diretório com o nome especificado.</li>
+        <ul>
+            <li><code>mkdir dir1 dir2</code> - Cria múltiplos diretórios de uma vez.</li>
+            <li><code>mkdir -m modo dir</code> - Define permissões específicas para o diretório criado.</li>
+            <li><code>mkdir --help</code> - Exibe informações de ajuda sobre o comando.</li>
+            <li><code>mkdir -v dir</code> - Mostra uma mensagem detalhada para cada diretório criado.</li>
+        </ul>
+        <li><code>touch arquivo</code> - Cria um novo arquivo vazio com o nome especificado.</li>
+        <ul>
+            <li><code>touch arquivo</code> - Cria um novo arquivo vazio com o nome especificado.</li>
+            <li><code>touch -c arquivo</code> - Não cria um arquivo se ele não existir.</li>
+            <li><code>touch -t YYYYMMDDHHMM arquivo</code> - Define a data e hora do arquivo no formato específico.</li>
+            <li><code>touch -d "data" arquivo</code> - Define a data e hora de modificação do arquivo.</li>
+            <li><code>touch -r arquivo_referência arquivo</code> - Define a data e hora do arquivo baseado em outro arquivo.</li>
+            <li><code>touch -a arquivo</code> - Atualiza somente a data de acesso do arquivo.</li>
+        </ul>
+        <li><code>cp origem destino</code> - Copia um arquivo ou diretório da origem para o destino.</li>
+        <ul>
+            <li><code>cp origem destino</code> - Copia um arquivo ou diretório da origem para o destino.</li>
+            <li><code>cp -r diretório destino</code> - Copia um diretório e seu conteúdo para o destino.</li>
+            <li><code>cp -i arquivo destino</code> - Pergunta antes de substituir um arquivo existente.</li>
+            <li><code>cp -u arquivo destino</code> - Copia apenas se o arquivo de origem for mais novo do que o destino.</li>
+            <li><code>cp -v arquivo destino</code> - Exibe informações detalhadas durante a cópia.</li>
+            <li><code>cp -p arquivo destino</code> - Preserva as permissões e datas originais do arquivo.</li>
+            
+            <ul>
+                <li><code>cp arquivo.txt destino/</code> - Copia o arquivo "arquivo.txt" para o diretório "destino/".</li>
+                <li><code>cp -r diretorio1 diretorio2/</code> - Copia o diretório "diretorio1" e seu conteúdo para o diretório "diretorio2/".</li>
+                <li><code>cp -i arquivo.txt destino/</code> - Pergunta antes de substituir um arquivo existente no destino.</li>
+                <li><code>cp -u arquivo.txt destino/</code> - Copia o arquivo apenas se ele for mais novo no destino.</li>
+                <li><code>cp -v arquivo.txt destino/</code> - Exibe informações detalhadas durante a cópia do arquivo.</li>
+                <li><code>cp -p arquivo.txt destino/</code> - Copia o arquivo preservando suas permissões e datas originais.</li>
+            </ul>
+        </ul>
+        <li><code>mv origem destino</code> - Move (ou renomeia) um arquivo ou diretório da origem para o destino.</li>
+        <ul>
+            <li><code>mv origem destino</code> - Move (ou renomeia) um arquivo ou diretório da origem para o destino.</li>
+            <li><code>mv -i origem destino</code> - Pergunta antes de substituir um arquivo existente.</li>
+            <li><code>mv -u arquivo destino</code> - Move apenas se o arquivo de origem for mais novo do que o destino.</li>
+            <li><code>mv -v arquivo destino</code> - Exibe informações detalhadas durante o movimento.</li>
+            <li><code>mv -f origem destino</code> - Força a substituição do destino, sem perguntar.</li>
+            <li><code>mv -u * destino</code> - Move todos os arquivos, mas somente se o destino não existir.</li>
+        </ul>
+  
+        <li><code>rm arquivo</code> - Remove um arquivo. Use <code>-r</code> para remover um diretório.</li>
+        <p>Lembre-se de que muitos comandos possuem opções adicionais. Você pode usar <code>--help</code> ou <code>-h</code> após um comando para ver mais informações sobre suas opções.</p>
+    </ul>
+</body>
+</html>
+
